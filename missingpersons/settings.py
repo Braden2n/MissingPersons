@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'missingpersons.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'missing.persons',
+        'USER': 'postgres',
+        'PASSWORD': 'Slayer4days!',
+        'HOST': 'localhost'
     }
 }
 
