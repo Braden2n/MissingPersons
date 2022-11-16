@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def indexPageView(request):
     return render(request, 'humantrafficking/index.html')
+
+
+def informationPageView(request):
+    return render(request, 'humantrafficking/information.html')
