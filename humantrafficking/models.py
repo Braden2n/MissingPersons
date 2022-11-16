@@ -4,5 +4,5 @@ from django.db import models
 
 
 class Person(models.Model):
-    def Meta():
+    class Meta():
         db_table = "person"
