@@ -199,6 +199,18 @@
             <td>M</td>
             <td>M</td>
           </tr>
+          {% for person in persons %}
+          <tr>
+            <td>{{ person.date_missing }}</td>
+            <td>{{ person.last_name }}</td>
+            <td>{{ person.first_name }}</td>
+            <td margin="auto">{{ person.age_at_missing }}</td>
+            <td>{{ person.city }}</td>
+            <td>{{ person.state }}</td>
+            <td>{{ person.gender }}</td>
+            <td>{{ person.race }}</td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </h2>
