@@ -12,33 +12,63 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lato:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
-      <ul
-        style="
+      <style>
+        ul {
           display: block-inline;
           text-style-type: none;
-          text-align: center;
           margin: auto;
-          padding: 15px;
-        "
-      >
-        <li style="display: inline; padding: 5px">
-          <a href="index.html">Home</a>
+          padding: 10px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          margin-right: 8px;
+          margin-left: 20px;
+          color: black;
+          text-align: center;
+          font-family: 'Alexandria', sans-serif;
+
+        }
+      </style>
+      <ul>
+        <li style="display: inline">
+          <a href="{% url 'index' %}">| Home</a>
         </li>
         <li style="display: inline; padding: 5px">
-          <a href="information.html">Information</a>
+          <a href="{% url 'information' %}">| Information</a>
         </li>
       </ul>
     </nav>
-    <h1>Home Page</h1>
+    <h1 style="text-align: center; padding: 3px">Home Page</h1>
     <h2>
-      <table
-        class="table table-bordered table-hover table-condensed"
-        margin="auto"
-      >
+      <table>
         <thead>
+          <style type="text/css" media="screen">
+            table {
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 25px;
+            }
+            table td {
+              border: 1px solid black;
+            }
+
+            table th {
+              border: 2px solid black;
+              font-size: 65%;
+            }
+          </style>
           <tr>
             <th title="Field #1">date_missing</th>
             <th title="Field #2">last_name</th>
@@ -50,7 +80,7 @@
             <th title="Field #8">race</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style="font-size: 50%">
           <tr>
             <td>10/30/2009</td>
             <td>Sharmarice</td>
@@ -211,18 +241,6 @@
             <td>M</td>
             <td>M</td>
           </tr>
-          {% for person in persons %}
-          <tr>
-            <td>{{ person.date_missing }}</td>
-            <td>{{ person.last_name }}</td>
-            <td>{{ person.first_name }}</td>
-            <td margin="auto">{{ person.age_at_missing }}</td>
-            <td>{{ person.city }}</td>
-            <td>{{ person.state }}</td>
-            <td>{{ person.gender }}</td>
-            <td>{{ person.race }}</td>
-          </tr>
-          {% endfor %}
         </tbody>
       </table>
     </h2>
