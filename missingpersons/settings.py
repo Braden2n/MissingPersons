@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'missingpersons.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'missing.persons',
+        'NAME': 'missing_persons',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost'
