@@ -48,5 +48,58 @@
   >
     Add a Person
   </h1>
+  <style>
+    div {
+      margin-bottom: 10px
+    }
+    label {
+      display: inline-block;
+      width: auto;
+    }
+    input {
+      margin-left: 15px;
+      padding: 5px, 10px;
+      float: right
+    }
+  </style>
+  <form method="post" style="display:inline-block" >
+    {% csrf_token %}
+    <div>
+      <label for="first_name" style="padding-left:50px;">First Name:</label>
+      <input type="text" id="first_name" name="first_name">
+    </div>
+    <div>
+      <label for="last_name" style="padding-left:50px;">Last Name:</label>
+      <input type="text" id="lirst_name" name="lirst_name">
+    </div>
+    <div>
+      <label for="date_missing" style="padding-left:50px;">Date Missing:</label>
+      <input type="text" id="date_missing" name="date_missing">
+    </div>
+    <div>
+      <label for="age_at_missing" style="padding-left:50px;">Age at Missing:</label>
+      <input type="text" id="age_at_missing" name="age_at_missing">
+    </div>
+    <div>
+      <label for="city" style="padding-left:50px;">City:</label>
+      <input type="text" id="city" name="city">
+    </div>
+    <div>
+      <label for="state" style="padding-left:50px;">State:</label>
+      <input type="text" id="state" name="state">
+    </div>
+    <div>
+      <label for="gender" style="padding-left:50px;">Gender:</label>
+      <input type="text" id="gender" name="gender">
+    </div>
+    <div>
+      <label for="race" style="padding-left:50px;">Race:</label>
+      <input type="text" id="race" name="race">
+    </div>
+    <br>
+    <div>
+      <button type="submit" class="btn btn-primary" style="margin-left:50px">Add Person</button>
+    </div>
+  </form>
 </body>
 {% endblock %}
