@@ -16,3 +16,11 @@ def indexPageView(request):
 
 def informationPageView(request):
     return render(request, 'humantrafficking/information.html')
+
+
+def searchPageView(request):
+    return render(request, 'humantrafficking/search.html')
+
+
+def addPageView(request):
+    return render(request, 'humantrafficking/add.html')

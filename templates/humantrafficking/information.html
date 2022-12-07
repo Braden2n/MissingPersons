@@ -7,7 +7,7 @@
           display: block-inline;
           font-style: none;
           margin: auto;
-          padding: 10px;
+          padding: 15px;
         }
 
         a {
@@ -25,7 +25,13 @@
           <a href="{% url 'index' %}">| Home</a>
         </li>
         <li style="display: inline; padding: 5px">
-          <a href="{% url 'information' %}">| Information</a>
+          <a href="{% url 'information' %}">| More Information</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'search' %}">| Search a Person</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'add' %}">| Add a Person</a>
         </li>
       </ul>
     </nav>

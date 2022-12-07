@@ -5,7 +5,7 @@
       <style>
         ul {
           display: block-inline;
-          text-style-type: none;
+          font-style: none;
           margin: auto;
           padding: 15px;
         }
@@ -25,7 +25,13 @@
           <a href="{% url 'index' %}">| Home</a>
         </li>
         <li style="display: inline; padding: 5px">
-          <a href="{% url 'information' %}">| Information</a>
+          <a href="{% url 'information' %}">| More Information</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'search' %}">| Search a Person</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'add' %}">| Add a Person</a>
         </li>
       </ul>
     </nav>
@@ -71,7 +77,7 @@
             <th title="Field #7">gender</th>
             <th title="Field #8">race</th>
           </tr>
-        {% for person in person %}
+        {% for person in persons %}
 
           </thead>
             <tbody style="font-size: 50%">
