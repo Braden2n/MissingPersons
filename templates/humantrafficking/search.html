@@ -48,5 +48,66 @@
   >
     Search for a Person
   </h1>
+  <form method="get">
+    <label for="first_name" style="padding-left:50px;">First Name</label>
+    <input type="text" id="first_name" name="first_name">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+  <table>
+    <thead>
+      <style type="text/css" media="screen">
+        table {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 25px;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 150%
+        }
+        table td {
+          border: 1px solid black;
+          font-family: "Ubuntu", sans-serif;
+          padding-left: 10px;
+          padding-right: 10px
+        }
+
+        table th {
+          border: 2px solid black;
+          font-size: 100%;
+          font-family: "Ubuntu", sans-serif;
+          padding-left: 10px;
+          padding-right: 10px
+        }
+      </style>
+    {% if persons|length == 0 %}
+      <p>No person found with that first name</p>
+    {% else %}
+      <tr>
+        <th title="Field #1">date_missing</th>
+        <th title="Field #2">last_name</th>
+        <th title="Field #3">first_name</th>
+        <th title="Field #4">age_at_missing</th>
+        <th title="Field #5">city</th>
+        <th title="Field #6">state</th>
+        <th title="Field #7">gender</th>
+        <th title="Field #8">race</th>
+      </tr>
+      {% for person in persons %}
+      </thead>
+        <tbody style="font-size: 65%">
+          <tr>
+            <td>{{ person.date_missing }}</td>
+            <td>{{ person.last_name }}</td>
+            <td>{{ person.first_name }}</td>
+            <td margin="auto">{{ person.age_at_missing }}</td>
+            <td>{{ person.city }}</td>
+            <td>{{ person.state }}</td>
+            <td>{{ person.gender }}</td>
+            <td>{{ person.race }}</td>
+          <tr>       
+        </tbody>
+      {% endfor %}
+    {% endif %}
+  </table>
 </body>
 {% endblock %}

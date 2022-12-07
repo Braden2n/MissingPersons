@@ -19,7 +19,18 @@ def informationPageView(request):
 
 
 def searchPageView(request):
-    return render(request, 'humantrafficking/search.html')
+
+    try:
+        name = request.GET('first_name')
+        persons = Person.objects.filter(first_name=name)
+    except:
+        persons = Person.objects.all()
+
+    context = {
+        "persons": persons
+    }
+
+    return render(request, 'humantrafficking/search.html', context)
 
 
 def addPageView(request):
