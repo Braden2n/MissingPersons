@@ -5,10 +5,10 @@ from .models import Person
 
 
 def indexPageView(request):
-    db_persons = Person.objects.all()
+    persons = Person.objects.all()
 
     context = {
-        "persons": db_persons
+        "persons": persons
     }
 
     return render(request, 'humantrafficking/index.html', context)

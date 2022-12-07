@@ -38,7 +38,6 @@
     >
       Home Page
     </h1>
-    <h2>
       <table>
         <thead>
           <style type="text/css" media="screen">
@@ -60,6 +59,7 @@
               font-family: "Ubuntu", sans-serif;
             }
           </style>
+        
           <tr>
             <th title="Field #1">date_missing</th>
             <th title="Field #2">last_name</th>
@@ -70,171 +70,23 @@
             <th title="Field #7">gender</th>
             <th title="Field #8">race</th>
           </tr>
-        </thead>
-        <tbody style="font-size: 50%">
-          <tr>
-            <td>10/30/2009</td>
-            <td>Sharmarice</td>
-            <td>Halima</td>
-            <td margin="auto">14</td>
-            <td>Granger</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>W</td>
-          </tr>
-          <tr>
-            <td>10/16/2015</td>
-            <td>Martinez</td>
-            <td>Kimberly</td>
-            <td margin="auto">16</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <td>07/23/2004</td>
-            <td>Gomez</td>
-            <td>Brenda</td>
-            <td margin="auto">3</td>
-            <td>Logan</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>05/25/2003</td>
-            <td>Bishop</td>
-            <td>Acacia</td>
-            <td margin="auto">1</td>
-            <td>Salt Lake City</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>W</td>
-          </tr>
-          <tr>
-            <td>08/03/2020</td>
-            <td>Salazar</td>
-            <td>Maria</td>
-            <td margin="auto">14</td>
-            <td>Snowville</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>04/09/2020</td>
-            <td>Hernandez-Soto</td>
-            <td>Peggy</td>
-            <td margin="auto">6</td>
-            <td>Ogden</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>06/24/2021</td>
-            <td>Jimenez</td>
-            <td>Lucero</td>
-            <td margin="auto">14</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>11/08/2013</td>
-            <td>Colindres-Avila</td>
-            <td>Yuris</td>
-            <td margin="auto">17</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <td>07/15/2021</td>
-            <td>Harris</td>
-            <td>Kandis</td>
-            <td margin="auto">16</td>
-            <td>Salt Lake City</td>
-            <td>UT</td>
-            <td>F</td>
-            <td>W</td>
-          </tr>
-          <tr>
-            <td>07/30/2006</td>
-            <td>Seal</td>
-            <td>Jaydan</td>
-            <td margin="auto">1</td>
-            <td>Garleys Wash</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>W</td>
-          </tr>
-          <tr>
-            <td>06/13/2018</td>
-            <td>Lizarraga</td>
-            <td>Jose</td>
-            <td margin="auto">13</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>04/23/2020</td>
-            <td>Cortez Trujillo</td>
-            <td>Eztli</td>
-            <td margin="auto">21</td>
-            <td>North Ogden</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>H</td>
-          </tr>
-          <tr>
-            <td>10/25/2017</td>
-            <td>Fowles</td>
-            <td>Juan</td>
-            <td margin="auto">15</td>
-            <td>Lehi</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <td>08/20/2012</td>
-            <td>Garcia</td>
-            <td>Isai</td>
-            <td margin="auto">17</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <td>09/01/2015</td>
-            <td>Smith</td>
-            <td>Macin</td>
-            <td margin="auto">17</td>
-            <td>St. George</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>W</td>
-          </tr>
-          <tr>
-            <td>01/26/2006</td>
-            <td>Sisco-Ramirez</td>
-            <td>Jose</td>
-            <td margin="auto">4</td>
-            <td>West Valley City</td>
-            <td>UT</td>
-            <td>M</td>
-            <td>M</td>
-          </tr>
-        </tbody>
+        {% for person in person %}
+
+          </thead>
+            <tbody style="font-size: 50%">
+              <tr>
+                <td>{{ person.date_missing }}</td>
+                <td>{{ person.last_name }}</td>
+                <td>{{ person.first_name }}</td>
+                <td margin="auto">{{ person.age_at_missing }}</td>
+                <td>{{ person.city }}</td>
+                <td>{{ person.state }}</td>
+                <td>{{ person.gender }}</td>
+                <td>{{ person.race }}</td>
+              <tr>       
+            </tbody>
+        {% endfor %}
       </table>
-    </h2>
   </body>
 
 {% endblock %}

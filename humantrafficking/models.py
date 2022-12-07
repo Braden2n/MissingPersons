@@ -17,4 +17,4 @@ class Person(models.Model):
         return self.last_name
 
     class Meta():
-        db_table = "person"
+        db_table = "persons"

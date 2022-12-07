@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'missingpersons.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'missing_persons',
+        'NAME': 'missing_persons_new',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost'
@@ -124,7 +124,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'humantrafficking/static')
-]    
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
