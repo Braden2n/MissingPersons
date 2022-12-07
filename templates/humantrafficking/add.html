@@ -1,42 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 <body>
-    <nav>
-        <style>
-          ul {
-            display: block-inline;
-            font-style: none;
-            margin: auto;
-            padding: 15px;
-          }
-  
-          a {
-            text-decoration: none;
-            font-size: 20px;
-            margin-right: 8px;
-            margin-left: 20px;
-            color: black;
-            text-align: center;
-            font-family: "Alexandria", sans-serif;
-          }
-        </style>
-        <ul>
-          <li style="display: inline">
-            <a href="{% url 'index' %}">| Home</a>
-          </li>
-          <li style="display: inline; padding: 5px">
-            <a href="{% url 'information' %}">| More Information</a>
-          </li>
-          <li style="display: inline">
-            <a href="{% url 'search' %}">| Search a Person</a>
-          </li>
-          <li style="display: inline">
-            <a href="{% url 'add' %}">| Add a Person</a>
-          </li>
-        </ul>
-      </nav>
-      
+  <nav>
+    <style>
+      ul {
+        display: block-inline;
+        font-style: none;
+        margin: auto;
+        padding: 15px;
+      }
 
-
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 8px;
+        margin-left: 20px;
+        color: black;
+        text-align: center;
+        font-family: "Alexandria", sans-serif;
+      }
+    </style>
+    <ul>
+      <li style="display: inline">
+        <a  href="{% url 'index' %}">| Home</a>
+      </li>
+      <li style="display: inline; padding: 5px">
+        <a href="{% url 'information' %}">| More Information</a>
+      </li>
+      <li style="display: inline">
+        <a href="{% url 'search' %}">| Search a Person</a>
+      </li>
+      <li style="display: inline">
+        <a href="{% url 'add' %}">| Add a Person</a>
+      </li>
+    </ul>
+  </nav>
+  <h1
+    style="
+      text-align: center;
+      padding: 3px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 40px
+    "
+  >
+    Add a Person
+  </h1>
 </body>
 {% endblock %}

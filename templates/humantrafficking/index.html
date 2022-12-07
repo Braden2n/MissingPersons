@@ -32,6 +32,9 @@
         </li>
         <li style="display: inline">
           <a href="{% url 'add' %}">| Add a Person</a>
+        <li style="display: inline; float:right; padding-right: 25px">
+          <a href="{% url 'admin' %}">| Admin Login</a>
+        </li>
         </li>
       </ul>
     </nav>
@@ -45,6 +48,8 @@
     >
       Home Page
     </h1>
+    <br>
+      <p style="padding-left:50px;">We have created this interactive database to keep track of important data for missing people. You can search for and add a missing person in the appropriate tabs above.</p>
       <table>
         <thead>
           <style type="text/css" media="screen">
@@ -54,16 +59,21 @@
               margin-right: auto;
               margin-top: 25px;
               font-family: "Ubuntu", sans-serif;
+              font-size: 150%
             }
             table td {
               border: 1px solid black;
               font-family: "Ubuntu", sans-serif;
+              padding-left: 10px;
+              padding-right: 10px
             }
 
             table th {
               border: 2px solid black;
-              font-size: 65%;
+              font-size: 100%;
               font-family: "Ubuntu", sans-serif;
+              padding-left: 10px;
+              padding-right: 10px
             }
           </style>
         
@@ -80,7 +90,7 @@
         {% for person in persons %}
 
           </thead>
-            <tbody style="font-size: 50%">
+            <tbody style="font-size: 65%">
               <tr>
                 <td>{{ person.date_missing }}</td>
                 <td>{{ person.last_name }}</td>
