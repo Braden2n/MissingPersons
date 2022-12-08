@@ -28,44 +28,43 @@
     />
   </head>
   <body>
-    <body>
-      <nav>
-        <style>
-          ul {
-            display: block-inline;
-            font-style: none;
-            margin: auto;
-            padding: 15px;
+    <nav>
+      <style>
+        ul {
+          display: block-inline;
+          font-style: none;
+          margin: auto;
+          padding: 15px;
           }
     
-          a {
-            text-decoration: none;
-            font-size: 20px;
-            margin-right: 8px;
-            margin-left: 20px;
-            color: black;
-            text-align: center;
-            font-family: "Alexandria", sans-serif;
-          }
-        </style>
-        <ul>
-          <li style="display: inline">
-            <a  href="{% url 'index' %}">| Home</a>
-          </li>
-          <li style="display: inline; padding: 5px">
-            <a href="{% url 'information' %}">| More Information</a>
-          </li>
-          <li style="display: inline">
-            <a href="{% url 'search' %}">| Search a Person</a>
-          </li>
-          <li style="display: inline">
-            <a href="{% url 'add' %}">| Add a Person</a>
-          </li>
-          <li style="display: inline; float:right; padding-right: 25px">
-            <a href="{% url 'admin' %}">| Admin Login</a>
-          </li>
-        </ul>
-      </nav>
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          margin-right: 8px;
+          margin-left: 20px;
+          color: black;
+          text-align: center;
+          font-family: "Alexandria", sans-serif;
+        }
+      </style>
+      <ul>
+        <li style="display: inline">
+          <a  href="{% url 'index' %}">| Home</a>
+        </li>
+        <li style="display: inline; padding: 5px">
+          <a href="{% url 'information' %}">| More Information</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'search' %}">| Search a Person</a>
+        </li>
+        <li style="display: inline">
+          <a href="{% url 'add' %}">| Add a Person</a>
+        </li>
+        <li style="display: inline; float:right; padding-right: 25px">
+          <a href="{% url 'admin' %}">| Admin Login</a>
+        </li>
+      </ul>
+    </nav>
     
     {% block content %}
     {% endblock %}
