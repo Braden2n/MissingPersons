@@ -24,7 +24,7 @@
       float: right
     }
   </style>
-  <form method="post" style="display:inline-block" >
+  <form method="post" style="display:inline-block">
     {% csrf_token %}
     <div>
       <label for="first_name" style="padding-left:50px;">First Name:</label>
@@ -35,12 +35,12 @@
       <input type="text" id="last_name" name="last_name">
     </div>
     <div>
-      <label for="date_missing" style="padding-left:50px;">Date Missing: (YYYY-MM-DD)</label>
-      <input type="text" id="date_missing" name="date_missing">
+      <label for="date_missing" style="padding-left:50px;">Date Missing:</label>
+      <input type="date" id="date_missing" name="date_missing">
     </div>
     <div>
       <label for="age_at_missing" style="padding-left:50px;">Age at Missing:</label>
-      <input type="text" id="age_at_missing" name="age_at_missing">
+      <input type="number" id="age_at_missing" name="age_at_missing">
     </div>
     <div>
       <label for="city" style="padding-left:50px;">City:</label>
