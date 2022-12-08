@@ -21,7 +21,7 @@ def informationPageView(request):
 def searchPageView(request):
 
     try:
-        name = request.GET('first_name')
+        name = request.GET['first_name']
         persons = Person.objects.filter(first_name=name)
     except:
         persons = Person.objects.all()
