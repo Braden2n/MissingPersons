@@ -35,7 +35,7 @@ def searchPageView(request):
 
 def addPageView(request):
     if request.method == "POST":
-       date_missing = request.POST["date_at_missing"]
+       date_missing = request.POST["date_missing"]
        last_name = request.POST["last_name"]
        first_name = request.POST["first_name"]
        age_at_missing = request.POST["age_at_missing"]
