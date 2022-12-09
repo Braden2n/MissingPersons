@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
 <h1
   style="
     text-align: center;
@@ -9,6 +11,9 @@
 >
   Information
 </h1>
+<div style="text-align: center; padding: 10px;">
+  <img src="{% static 'img/infoimg.avif'%}" alt="Woman walking alone" width="600">
+</div>
 <style>
   h2 {
     font-family: "Ubuntu", sans-serif;
@@ -24,6 +29,14 @@
   }
 </style>
 <br />
+
+<h2 style="padding-left: 25px">Did you know?</h2>
+<ul style="padding-left: 75px">
+  <li>50% of identified girl victims are aged between 15 and 17</li>
+  <li>40% of trafficked boys are under 12 years of age</li>
+  <li>There are 15,000 to 50,000 human trafficking cases in the United States every year</li>
+</ul>
+
 <h2 style="padding-left: 25px">Signs someone is being human trafficked:</h2>
 <ul style="padding-left: 75px">
   <li>Showing signs of physical injuries and abuse.</li>
@@ -46,14 +59,21 @@
   If you suspect human trafficking, call the toll-free number below:
 </h3>
 <p style="padding-left: 50px; font-size: 150%">1-888-373-7888</p>
-
+<br>
 <div style="text-align: center">
   <button
     type="submit"
-    class="btn btn-primary"
+    class="btn btn-info"
     onclick="window.location.href='https://humantraffickinghotline.org/';"
   >
-    Click here for more information
+    National Human Trafficking Hotline
+  </button>
+  <button
+    type="submit"
+    class="btn btn-info"
+    onclick="window.location.href='https://www.ctdatacollaborative.org/';"
+  >
+    Statistics 
   </button>
 </div>
 {% endblock %}
