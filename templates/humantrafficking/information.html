@@ -1,89 +1,79 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+{% load static %}
 {% block content %}
-  <body>
-    <nav>
-      <style>
-        ul {
-          display: block-inline;
-          font-style: none;
-          margin: auto;
-          padding: 15px;
-        }
+<h1
+  style="
+    text-align: center;
+    padding: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+  "
+>
+  Information
+</h1>
+<div style="text-align: center; padding: 10px;">
+  <img src="{% static 'img/infoimg.avif'%}" alt="Woman walking alone" width="600">
+</div>
+<style>
+  h2 {
+    font-family: "Ubuntu", sans-serif;
+  }
+  ul {
+    font-family: "Ubuntu", sans-serif;
+  }
+  h3 {
+    font-family: "Ubuntu", sans-serif;
+  }
+  p {
+    font-family: "Ubuntu", sans-serif;
+  }
+</style>
+<br />
 
-        a {
-          text-decoration: none;
-          font-size: 20px;
-          margin-right: 8px;
-          margin-left: 20px;
-          color: black;
-          text-align: center;
-          font-family: "Alexandria", sans-serif;
-        }
-      </style>
-      <ul>
-        <li style="display: inline">
-          <a href="{% url 'index' %}">| Home</a>
-        </li>
-        <li style="display: inline; padding: 5px">
-          <a href="{% url 'information' %}">| More Information</a>
-        </li>
-        <li style="display: inline">
-          <a href="{% url 'search' %}">| Search a Person</a>
-        </li>
-        <li style="display: inline">
-          <a href="{% url 'add' %}">| Add a Person</a>
-        </li>
-        <li style="display: inline; float:right; padding-right: 25px">
-          <a href="{% url 'admin' %}">| Admin Login</a>
-        </li>
-      </ul>
-    </nav>
-    <h1
-      style="
-        text-align: center;
-        padding: 3px;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 40px
-      "
-    >
-      Information
-    </h1>
-    <style>
-      h2 {
-        font-family: "Ubuntu", sans-serif;
-      }
-      ul {
-        font-family: "Ubuntu", sans-serif;
-      }
-      h3 {
-        font-family: "Ubuntu", sans-serif;
-      }
-      p {
-        font-family: "Ubuntu", sans-serif;
-      }
-    </style>
-    <br>
-    <h2 style="padding-left:25px;">Signs someone is being human trafficked:</h2>
-    <ul style="padding-left:75px;">
-      <li>Showing signs of physical injuries and abuse.</li>
-      <li>
-        Avoiding eye contact, social interaction, and authority figures/law
-        enforcement.
-      </li>
-      <li>
-        Avoiding eye contact, social interaction, and authority figures/law
-        enforcement
-      </li>
-      <li>
-        Security measures that appear to keep people inside an establishment -
-        barbed wire inside of a fence, bars covering the insides of windows
-      </li>
-      <li>
-        Not allowing people to go into public alone, or speak for themselves
-      </li>
-    </ul>
-    <br>
-    <h3 style="padding-left:25px">If you suspect human trafficking, call the toll-free number below:</h3>
-    <p style="padding-left:50px; font-size:150%;">1-888-373-7888</p>
-  </body>
+<h2 style="padding-left: 25px">Did you know?</h2>
+<ul style="padding-left: 75px">
+  <li>50% of identified girl victims are aged between 15 and 17</li>
+  <li>40% of trafficked boys are under 12 years of age</li>
+  <li>There are 15,000 to 50,000 human trafficking cases in the United States every year</li>
+</ul>
+
+<h2 style="padding-left: 25px">Signs someone is being human trafficked:</h2>
+<ul style="padding-left: 75px">
+  <li>Showing signs of physical injuries and abuse.</li>
+  <li>
+    Avoiding eye contact, social interaction, and authority figures/law
+    enforcement.
+  </li>
+  <li>
+    Avoiding eye contact, social interaction, and authority figures/law
+    enforcement
+  </li>
+  <li>
+    Security measures that appear to keep people inside an establishment -
+    barbed wire inside of a fence, bars covering the insides of windows
+  </li>
+  <li>Not allowing people to go into public alone, or speak for themselves</li>
+</ul>
+<br />
+<h3 style="padding-left: 25px">
+  If you suspect human trafficking, call the toll-free number below:
+</h3>
+<p style="padding-left: 50px; font-size: 150%">1-888-373-7888</p>
+<br>
+<div style="text-align: center;">
+  <button
+    type="submit"
+    class="btn btn-info"
+    onclick="window.location.href='https://humantraffickinghotline.org/';"
+  >
+    National Human Trafficking Hotline
+  </button>
+  <button
+    type="submit"
+    class="btn btn-info"
+    onclick="window.location.href='https://www.ctdatacollaborative.org/';"
+  >
+    Statistics 
+  </button>
+</div>
 {% endblock %}

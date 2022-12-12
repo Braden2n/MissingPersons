@@ -1,43 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<body>
-  <nav>
-      <style>
-        ul {
-          display: block-inline;
-          font-style: none;
-          margin: auto;
-          padding: 15px;
-        }
-
-        a {
-          text-decoration: none;
-          font-size: 20px;
-          margin-right: 8px;
-          margin-left: 20px;
-          color: black;
-          text-align: center;
-          font-family: "Alexandria", sans-serif;
-        }
-      </style>
-      <ul>
-        <li style="display: inline">
-          <a href="{% url 'index' %}">| Home</a>
-        </li>
-        <li style="display: inline; padding: 5px">
-          <a href="{% url 'information' %}">| More Information</a>
-        </li>
-        <li style="display: inline">
-          <a href="{% url 'search' %}">| Search a Person</a>
-        </li>
-        <li style="display: inline">
-          <a href="{% url 'add' %}">| Add a Person</a>
-        </li>
-        <li style="display: inline; float:right; padding-right: 25px">
-          <a href="{% url 'admin' %}">| Admin Login</a>
-        </li>
-      </ul>
-    </nav>
   <h1
     style="
       text-align: center;
@@ -53,47 +15,48 @@
     <input type="text" id="first_name" name="first_name">
     <button type="submit" class="btn btn-primary">Search</button>
   </form>
-  <table>
-    <thead>
-      <style type="text/css" media="screen">
-        table {
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 25px;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 150%
-        }
-        table td {
-          border: 1px solid black;
-          font-family: "Ubuntu", sans-serif;
-          padding-left: 10px;
-          padding-right: 10px
-        }
-
-        table th {
-          border: 2px solid black;
-          font-size: 100%;
-          font-family: "Ubuntu", sans-serif;
-          padding-left: 10px;
-          padding-right: 10px
-        }
-      </style>
-    {% if persons|length == 0 %}
-      <p>No person found with that first name</p>
-    {% else %}
-      <tr>
-        <th title="Field #1">date_missing</th>
-        <th title="Field #2">last_name</th>
-        <th title="Field #3">first_name</th>
-        <th title="Field #4">age_at_missing</th>
-        <th title="Field #5">city</th>
-        <th title="Field #6">state</th>
-        <th title="Field #7">gender</th>
-        <th title="Field #8">race</th>
-      </tr>
-      {% for person in persons %}
+  {% if persons|length == 0 %}
+    <br>
+    <p style="padding-left:50px;">No person found with that first name</p>
+  {% else %}
+    <table>
+      <thead>
+        <style type="text/css" media="screen">
+          table {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 150%
+          }
+          table td {
+            border: 1px solid black;
+            font-family: "Ubuntu", sans-serif;
+            padding-left: 10px;
+            padding-right: 10px
+          }
+  
+          table th {
+            border: 2px solid black;
+            font-size: 100%;
+            font-family: "Ubuntu", sans-serif;
+            padding-left: 10px;
+            padding-right: 10px
+          }
+        </style>
+        <tr>
+          <th title="Field #1">Date Missing</th>
+          <th title="Field #2">Last Name</th>
+          <th title="Field #3">First Name</th>
+          <th title="Field #4">Age at Missing</th>
+          <th title="Field #5">City</th>
+          <th title="Field #6">State</th>
+          <th title="Field #7">Gender</th>
+          <th title="Field #8">Race</th>
+        </tr>
       </thead>
+      {% for person in persons %}
         <tbody style="font-size: 65%">
           <tr>
             <td>{{ person.date_missing }}</td>
@@ -109,5 +72,4 @@
       {% endfor %}
     {% endif %}
   </table>
-</body>
 {% endblock %}
